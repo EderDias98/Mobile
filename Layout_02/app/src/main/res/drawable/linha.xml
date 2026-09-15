@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-  
-</selector>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Altura da linha no meio -->
+    <size android:height="10dp" />
+
+    <!-- Gradiente que some nas pontas e engrossa/escurece no centro -->
+    <gradient
+        android:angle="0"
+        android:startColor="@android:color/transparent"
+        android:centerColor="@color/black"
+        android:endColor="@android:color/transparent" />
+</shape>

@@ -1,19 +1,167 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:src="@drawable/logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/caixa_02"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.25"/>
+
+
+
+    <EditText
+        android:id="@+id/caixa01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Senha"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:backgroundTint="@null"
+        android:background="@drawable/caixa"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/caixa_02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:hint="Nome de usuário"
+        android:backgroundTint="@null"
+        android:background="@drawable/caixa"
+        app:layout_constraintBottom_toTopOf="@id/caixa01"
+        android:layout_marginBottom="8dp"
+
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/entrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        android:backgroundTint="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/caixa01"
+        android:layout_marginTop="20dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Esqueci"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Esqueci minha senha"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/entrar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ou faça login com"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/Esqueci"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/A"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="A"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:backgroundTint="@color/black"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/B"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/login"
+        android:layout_marginTop="20dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/B"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="B"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:backgroundTint="@color/black"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@id/A"
+        app:layout_constraintEnd_toStartOf="@id/C"
+        app:layout_constraintTop_toBottomOf="@id/login"
+        android:layout_marginTop="20dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/C"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="C"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:backgroundTint="@color/black"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toEndOf="@id/B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintTop_toBottomOf="@+id/A"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="20dp">
+
+    <!-- O texto do botão/link -->
+    <TextView
+        android:id="@+id/btnCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ou click aqui para se cadastrar"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- A linha simulando o sublinhado exatamente embaixo do texto -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

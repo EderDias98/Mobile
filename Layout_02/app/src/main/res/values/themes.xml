@@ -3,7 +3,11 @@
     <style name="Base.Theme.Layout_02" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="fontFamily">@font/caveat</item>
     </style>
+
+
+
 
     <style name="Theme.Layout_02" parent="Base.Theme.Layout_02" />
 </resources>
