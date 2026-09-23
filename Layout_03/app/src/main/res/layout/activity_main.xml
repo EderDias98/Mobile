@@ -136,7 +136,7 @@
             android:background="@color/white"
             android:padding="6dp"
             android:text="Código"
-            android:textSize="14dp">
+            android:textSize="14dp"/>
 
     </FrameLayout>
     <FrameLayout
@@ -157,7 +157,7 @@
             android:background="@color/white"
             android:padding="6dp"
             android:text="Enviar"
-            android:textSize="14dp">
+            android:textSize="14dp"/>
 
     </FrameLayout>
 
