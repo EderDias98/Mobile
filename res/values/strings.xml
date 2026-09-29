@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="quardar">Quardar</string>
+    <string name="frases_de_gatos_e_cachorros">Frases de gatos e cachorros</string>
+    <string name="gerar_outra_frase">Gerar outra frase</string>
+</resources>
