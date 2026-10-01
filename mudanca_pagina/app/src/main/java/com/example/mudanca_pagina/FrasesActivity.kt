@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -79,11 +80,17 @@ class FrasesActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun gerarNovaFrase() {
-        val frase = when (categoriaSelecionada) {
-            Categoria.GATO -> frasesGato.random()
-            Categoria.CACHORRO -> frasesCachorro.random()
-            Categoria.NENHUM -> "Selecione a categoria Gato ou Cachorro!"
+        when (categoriaSelecionada) {
+            Categoria.GATO -> {
+                binding.frase.text = frasesGato.random()
+            }
+            Categoria.CACHORRO -> {
+                binding.frase.text = frasesCachorro.random()
+            }
+            Categoria.NENHUM -> {
+
+                Toast.makeText(this, "Por favor, selecione Gato ou Cachorro primeiro!", Toast.LENGTH_SHORT).show()
+            }
         }
-        binding.frase.text = frase
     }
 }

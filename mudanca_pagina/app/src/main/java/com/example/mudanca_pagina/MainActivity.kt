@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -43,15 +44,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
 
     override fun onClick(view: View) {
-
         if(view.id == R.id.btn_guardar){
+            val nomeDigitado = binding.nome.text.toString()
 
-            sp.edit().putString("boas_vindas", binding.nome.text.toString()).apply()
-            startActivity(Intent(this, FrasesActivity::class.java))
-            finish()
-
+            // Valida se o campo está vazio
+            if (nomeDigitado.isEmpty()) {
+                Toast.makeText(this, "Digite seu nome para continuar!", Toast.LENGTH_SHORT).show()
+            } else {
+                sp.edit().putString("boas_vindas", nomeDigitado).apply()
+                startActivity(Intent(this, FrasesActivity::class.java))
+                finish()
+            }
         }
-
-
     }
 }
